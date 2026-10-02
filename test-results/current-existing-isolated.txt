@@ -1,0 +1,16 @@
+$ python3 tests/phase1/run_existing_isolated.py
+test_bad_source_and_downstream_failure (test_all_sources.AllSourcesTests.test_bad_source_and_downstream_failure) ... ok
+test_correlations_boundaries_and_malformed_lines (test_all_sources.AllSourcesTests.test_correlations_boundaries_and_malformed_lines) ... ok
+test_empty_and_corrupt_archives (test_all_sources.AllSourcesTests.test_empty_and_corrupt_archives) ... ok
+test_runner_all_sources_full_scan (test_all_sources.AllSourcesTests.test_runner_all_sources_full_scan) ... ok
+test_empty_and_corrupt_archives (test_auth_prefilter.AuthPrefilterTests.test_empty_and_corrupt_archives) ... ok
+test_numeric_boundaries_and_immediate_stop (test_auth_prefilter.AuthPrefilterTests.test_numeric_boundaries_and_immediate_stop) ... ok
+test_processor_rejects_bad_row (test_auth_prefilter.AuthPrefilterTests.test_processor_rejects_bad_row) ... ok
+test_runner_matches_and_stats (test_auth_prefilter.AuthPrefilterTests.test_runner_matches_and_stats) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.456s
+
+OK
+
+EXIT_CODE=0

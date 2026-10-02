@@ -1,0 +1,38 @@
+$ python3 -m unittest discover -s tests/phase1 -p test_*.py -v
+oversize prefilter measured peak RSS=2560 KiB; AS limit=32 MiB
+test_chunk_boundary_through_runner (test_engineering_guards.EngineeringTests.test_chunk_boundary_through_runner) ... ok
+test_default_all_six_unchanged (test_engineering_guards.EngineeringTests.test_default_all_six_unchanged) ... ok
+test_exact_limit_native_and_eof (test_engineering_guards.EngineeringTests.test_exact_limit_native_and_eof) ... ok
+test_invalid_selector_fails_no_promotion (test_engineering_guards.EngineeringTests.test_invalid_selector_fails_no_promotion) ... ok
+test_oversize_no_newline_under_memory_limit (test_engineering_guards.EngineeringTests.test_oversize_no_newline_under_memory_limit) ... ok
+test_oversize_preserves_existing_output_and_stats (test_engineering_guards.EngineeringTests.test_oversize_preserves_existing_output_and_stats) ... ok
+test_oversize_rejected_before_emit (test_engineering_guards.EngineeringTests.test_oversize_rejected_before_emit) ... ok
+test_single_case_real_runner (test_engineering_guards.EngineeringTests.test_single_case_real_runner) ... ok
+test_complete_field_count_required_before_cutoff (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_cutoff) ... ok
+test_complete_field_count_required_before_forwarding (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_forwarding) ... ok
+test_corrupt_gzip_propagates (test_unified_path.UnifiedPathTests.test_corrupt_gzip_propagates) ... ok
+test_downstream_failure_propagates (test_unified_path.UnifiedPathTests.test_downstream_failure_propagates) ... ok
+test_failed_run_preserves_existing_output (test_unified_path.UnifiedPathTests.test_failed_run_preserves_existing_output) ... ok
+test_final_record_without_newline (test_unified_path.UnifiedPathTests.test_final_record_without_newline) ... ok
+test_invalid_timestamp_cannot_stop (test_unified_path.UnifiedPathTests.test_invalid_timestamp_cannot_stop) ... ok
+test_invalid_timestamp_not_forwarded (test_unified_path.UnifiedPathTests.test_invalid_timestamp_not_forwarded) ... ok
+test_long_numeric_continuation_cannot_stop_runner (test_unified_path.UnifiedPathTests.test_long_numeric_continuation_cannot_stop_runner) ... ok
+test_long_record_c_to_python_integrity (test_unified_path.UnifiedPathTests.test_long_record_c_to_python_integrity) ... ok
+test_long_record_native_integrity (test_unified_path.UnifiedPathTests.test_long_record_native_integrity) ... ok
+test_native_broken_pipe (test_unified_path.UnifiedPathTests.test_native_broken_pipe) ... ok
+test_native_flush_failure_must_fail (test_unified_path.UnifiedPathTests.test_native_flush_failure_must_fail) ... ok
+test_native_stats_open_failure_must_fail (test_unified_path.UnifiedPathTests.test_native_stats_open_failure_must_fail) ... ok
+test_nonmonotonic_input_must_reject_or_preserve (test_unified_path.UnifiedPathTests.test_nonmonotonic_input_must_reject_or_preserve) ... ok
+test_nonnumeric_incomplete_rejected_observably (test_unified_path.UnifiedPathTests.test_nonnumeric_incomplete_rejected_observably) ... ok
+test_numeric_fragment_cannot_stop_runner (test_unified_path.UnifiedPathTests.test_numeric_fragment_cannot_stop_runner) ... ok
+test_numeric_fragment_not_forwarded (test_unified_path.UnifiedPathTests.test_numeric_fragment_not_forwarded) ... ok
+test_processor_stats_failure_propagates (test_unified_path.UnifiedPathTests.test_processor_stats_failure_propagates) ... ok
+test_runner_all_four_sources (test_unified_path.UnifiedPathTests.test_runner_all_four_sources) ... ok
+test_sorted_valid_early_stop (test_unified_path.UnifiedPathTests.test_sorted_valid_early_stop) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 8.950s
+
+OK
+
+EXIT_CODE=0

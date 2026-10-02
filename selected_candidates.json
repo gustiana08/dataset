@@ -1,0 +1,92 @@
+[
+  {
+    "case_id": "case_001",
+    "anchor": {
+      "time": 150885,
+      "user": "U620@DOM1",
+      "src_comp": "C17693",
+      "dst_comp": "C1003"
+    },
+    "pilot_time_window": {
+      "start": 147285,
+      "end": 154485,
+      "duration_seconds": 7200
+    },
+    "selection_rule": "Segment 1 of 6. Using all records, let a=min(time), b=max(time). Assign each event to zero-based segment min(5, floor(6*(time-a)/(b-a))). The six equal-duration segments are left-closed and right-open, except the last includes b. Sort by (time, user, src_comp, dst_comp), ascending, and in each segment select the first event whose time is more than 7200 seconds after the previous selected time (no distance constraint for the first segment). Ties use lexicographic user, src_comp, dst_comp order; identical duplicate records are equivalent. Fail if any segment has no feasible event. a=150885, b=2557047."
+  },
+  {
+    "case_id": "case_002",
+    "anchor": {
+      "time": 578438,
+      "user": "U737@DOM1",
+      "src_comp": "C19932",
+      "dst_comp": "C1065"
+    },
+    "pilot_time_window": {
+      "start": 574838,
+      "end": 582038,
+      "duration_seconds": 7200
+    },
+    "selection_rule": "Segment 2 of 6. Using all records, let a=min(time), b=max(time). Assign each event to zero-based segment min(5, floor(6*(time-a)/(b-a))). The six equal-duration segments are left-closed and right-open, except the last includes b. Sort by (time, user, src_comp, dst_comp), ascending, and in each segment select the first event whose time is more than 7200 seconds after the previous selected time (no distance constraint for the first segment). Ties use lexicographic user, src_comp, dst_comp order; identical duplicate records are equivalent. Fail if any segment has no feasible event. a=150885, b=2557047."
+  },
+  {
+    "case_id": "case_003",
+    "anchor": {
+      "time": 1066394,
+      "user": "U66@DOM1",
+      "src_comp": "C17693",
+      "dst_comp": "C3610"
+    },
+    "pilot_time_window": {
+      "start": 1062794,
+      "end": 1069994,
+      "duration_seconds": 7200
+    },
+    "selection_rule": "Segment 3 of 6. Using all records, let a=min(time), b=max(time). Assign each event to zero-based segment min(5, floor(6*(time-a)/(b-a))). The six equal-duration segments are left-closed and right-open, except the last includes b. Sort by (time, user, src_comp, dst_comp), ascending, and in each segment select the first event whose time is more than 7200 seconds after the previous selected time (no distance constraint for the first segment). Ties use lexicographic user, src_comp, dst_comp order; identical duplicate records are equivalent. Fail if any segment has no feasible event. a=150885, b=2557047."
+  },
+  {
+    "case_id": "case_004",
+    "anchor": {
+      "time": 1353975,
+      "user": "U8777@C3388",
+      "src_comp": "C17693",
+      "dst_comp": "C3388"
+    },
+    "pilot_time_window": {
+      "start": 1350375,
+      "end": 1357575,
+      "duration_seconds": 7200
+    },
+    "selection_rule": "Segment 4 of 6. Using all records, let a=min(time), b=max(time). Assign each event to zero-based segment min(5, floor(6*(time-a)/(b-a))). The six equal-duration segments are left-closed and right-open, except the last includes b. Sort by (time, user, src_comp, dst_comp), ascending, and in each segment select the first event whose time is more than 7200 seconds after the previous selected time (no distance constraint for the first segment). Ties use lexicographic user, src_comp, dst_comp order; identical duplicate records are equivalent. Fail if any segment has no feasible event. a=150885, b=2557047."
+  },
+  {
+    "case_id": "case_005",
+    "anchor": {
+      "time": 1758226,
+      "user": "U737@DOM1",
+      "src_comp": "C19932",
+      "dst_comp": "C467"
+    },
+    "pilot_time_window": {
+      "start": 1754626,
+      "end": 1761826,
+      "duration_seconds": 7200
+    },
+    "selection_rule": "Segment 5 of 6. Using all records, let a=min(time), b=max(time). Assign each event to zero-based segment min(5, floor(6*(time-a)/(b-a))). The six equal-duration segments are left-closed and right-open, except the last includes b. Sort by (time, user, src_comp, dst_comp), ascending, and in each segment select the first event whose time is more than 7200 seconds after the previous selected time (no distance constraint for the first segment). Ties use lexicographic user, src_comp, dst_comp order; identical duplicate records are equivalent. Fail if any segment has no feasible event. a=150885, b=2557047."
+  },
+  {
+    "case_id": "case_006",
+    "anchor": {
+      "time": 2296175,
+      "user": "U212@DOM1",
+      "src_comp": "C17693",
+      "dst_comp": "C126"
+    },
+    "pilot_time_window": {
+      "start": 2292575,
+      "end": 2299775,
+      "duration_seconds": 7200
+    },
+    "selection_rule": "Segment 6 of 6. Using all records, let a=min(time), b=max(time). Assign each event to zero-based segment min(5, floor(6*(time-a)/(b-a))). The six equal-duration segments are left-closed and right-open, except the last includes b. Sort by (time, user, src_comp, dst_comp), ascending, and in each segment select the first event whose time is more than 7200 seconds after the previous selected time (no distance constraint for the first segment). Ties use lexicographic user, src_comp, dst_comp order; identical duplicate records are equivalent. Fail if any segment has no feasible event. a=150885, b=2557047."
+  }
+]

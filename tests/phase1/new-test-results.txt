@@ -1,0 +1,267 @@
+test_complete_field_count_required_before_cutoff (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_cutoff) ... 
+  test_complete_field_count_required_before_cutoff (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_cutoff) (malformed='9999999\n') ... FAIL
+  test_complete_field_count_required_before_cutoff (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_cutoff) (malformed='9999999,C\n') ... FAIL
+  test_complete_field_count_required_before_cutoff (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_cutoff) (malformed='9999999,C,D,extra\n') ... FAIL
+  test_complete_field_count_required_before_cutoff (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_cutoff) (malformed='9999999,"open\n') ... FAIL
+test_complete_field_count_required_before_forwarding (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_forwarding) ... 
+  test_complete_field_count_required_before_forwarding (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_forwarding) (malformed='150000\n') ... FAIL
+  test_complete_field_count_required_before_forwarding (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_forwarding) (malformed='150000,C\n') ... FAIL
+  test_complete_field_count_required_before_forwarding (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_forwarding) (malformed='150000,C,D,extra\n') ... FAIL
+  test_complete_field_count_required_before_forwarding (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_forwarding) (malformed='150000,"open\n') ... FAIL
+test_corrupt_gzip_propagates (test_unified_path.UnifiedPathTests.test_corrupt_gzip_propagates) ... ok
+test_downstream_failure_propagates (test_unified_path.UnifiedPathTests.test_downstream_failure_propagates) ... ok
+test_failed_run_preserves_existing_output (test_unified_path.UnifiedPathTests.test_failed_run_preserves_existing_output) ... FAIL
+test_final_record_without_newline (test_unified_path.UnifiedPathTests.test_final_record_without_newline) ... ok
+test_invalid_timestamp_cannot_stop (test_unified_path.UnifiedPathTests.test_invalid_timestamp_cannot_stop) ... FAIL
+test_invalid_timestamp_not_forwarded (test_unified_path.UnifiedPathTests.test_invalid_timestamp_not_forwarded) ... FAIL
+test_long_numeric_continuation_cannot_stop_runner (test_unified_path.UnifiedPathTests.test_long_numeric_continuation_cannot_stop_runner) ... FAIL
+test_long_record_c_to_python_integrity (test_unified_path.UnifiedPathTests.test_long_record_c_to_python_integrity) ... FAIL
+test_long_record_native_integrity (test_unified_path.UnifiedPathTests.test_long_record_native_integrity) ... FAIL
+test_native_broken_pipe (test_unified_path.UnifiedPathTests.test_native_broken_pipe) ... ok
+test_native_flush_failure_must_fail (test_unified_path.UnifiedPathTests.test_native_flush_failure_must_fail) ... FAIL
+test_native_stats_open_failure_must_fail (test_unified_path.UnifiedPathTests.test_native_stats_open_failure_must_fail) ... FAIL
+test_nonmonotonic_input_must_reject_or_preserve (test_unified_path.UnifiedPathTests.test_nonmonotonic_input_must_reject_or_preserve) ... FAIL
+test_nonnumeric_incomplete_rejected_observably (test_unified_path.UnifiedPathTests.test_nonnumeric_incomplete_rejected_observably) ... ok
+test_numeric_fragment_cannot_stop_runner (test_unified_path.UnifiedPathTests.test_numeric_fragment_cannot_stop_runner) ... FAIL
+test_numeric_fragment_not_forwarded (test_unified_path.UnifiedPathTests.test_numeric_fragment_not_forwarded) ... FAIL
+test_processor_stats_failure_propagates (test_unified_path.UnifiedPathTests.test_processor_stats_failure_propagates) ... ok
+test_runner_all_four_sources (test_unified_path.UnifiedPathTests.test_runner_all_four_sources) ... ok
+test_sorted_valid_early_stop (test_unified_path.UnifiedPathTests.test_sorted_valid_early_stop) ... ok
+
+======================================================================
+FAIL: test_complete_field_count_required_before_cutoff (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_cutoff) (malformed='9999999\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 132, in test_complete_field_count_required_before_cutoff
+    self.safe_retention(malformed+record(),record())
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 73, in safe_retention
+    self.assertEqual(self.rows(), list(csv.reader(io.StringIO(expected))))
+AssertionError: Lists differ: [] != [['150000', 'C', 'D']]
+
+Second list contains 1 additional elements.
+First extra element 0:
+['150000', 'C', 'D']
+
+- []
++ [['150000', 'C', 'D']]
+
+======================================================================
+FAIL: test_complete_field_count_required_before_cutoff (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_cutoff) (malformed='9999999,C\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 132, in test_complete_field_count_required_before_cutoff
+    self.safe_retention(malformed+record(),record())
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 73, in safe_retention
+    self.assertEqual(self.rows(), list(csv.reader(io.StringIO(expected))))
+AssertionError: Lists differ: [] != [['150000', 'C', 'D']]
+
+Second list contains 1 additional elements.
+First extra element 0:
+['150000', 'C', 'D']
+
+- []
++ [['150000', 'C', 'D']]
+
+======================================================================
+FAIL: test_complete_field_count_required_before_cutoff (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_cutoff) (malformed='9999999,C,D,extra\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 132, in test_complete_field_count_required_before_cutoff
+    self.safe_retention(malformed+record(),record())
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 73, in safe_retention
+    self.assertEqual(self.rows(), list(csv.reader(io.StringIO(expected))))
+AssertionError: Lists differ: [] != [['150000', 'C', 'D']]
+
+Second list contains 1 additional elements.
+First extra element 0:
+['150000', 'C', 'D']
+
+- []
++ [['150000', 'C', 'D']]
+
+======================================================================
+FAIL: test_complete_field_count_required_before_cutoff (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_cutoff) (malformed='9999999,"open\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 132, in test_complete_field_count_required_before_cutoff
+    self.safe_retention(malformed+record(),record())
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 73, in safe_retention
+    self.assertEqual(self.rows(), list(csv.reader(io.StringIO(expected))))
+AssertionError: Lists differ: [] != [['150000', 'C', 'D']]
+
+Second list contains 1 additional elements.
+First extra element 0:
+['150000', 'C', 'D']
+
+- []
++ [['150000', 'C', 'D']]
+
+======================================================================
+FAIL: test_complete_field_count_required_before_forwarding (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_forwarding) (malformed='150000\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 127, in test_complete_field_count_required_before_forwarding
+    self.assertEqual(result.stdout,record().encode())
+AssertionError: b'150000\n150000,C,D\n' != b'150000,C,D\n'
+
+======================================================================
+FAIL: test_complete_field_count_required_before_forwarding (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_forwarding) (malformed='150000,C\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 127, in test_complete_field_count_required_before_forwarding
+    self.assertEqual(result.stdout,record().encode())
+AssertionError: b'150000,C\n150000,C,D\n' != b'150000,C,D\n'
+
+======================================================================
+FAIL: test_complete_field_count_required_before_forwarding (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_forwarding) (malformed='150000,C,D,extra\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 127, in test_complete_field_count_required_before_forwarding
+    self.assertEqual(result.stdout,record().encode())
+AssertionError: b'150000,C,D,extra\n150000,C,D\n' != b'150000,C,D\n'
+
+======================================================================
+FAIL: test_complete_field_count_required_before_forwarding (test_unified_path.UnifiedPathTests.test_complete_field_count_required_before_forwarding) (malformed='150000,"open\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 127, in test_complete_field_count_required_before_forwarding
+    self.assertEqual(result.stdout,record().encode())
+AssertionError: b'150000,"open\n150000,C,D\n' != b'150000,C,D\n'
+
+======================================================================
+FAIL: test_failed_run_preserves_existing_output (test_unified_path.UnifiedPathTests.test_failed_run_preserves_existing_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 204, in test_failed_run_preserves_existing_output
+    self.assertEqual(path.read_bytes(),original,'Failed gzip run overwrote existing output')
+AssertionError: b'time,src_comp,comp_resolved\r\n150000,C,D\r\n' != b'PREEXISTING OUTPUT MUST SURVIVE\n' : Failed gzip run overwrote existing output
+
+======================================================================
+FAIL: test_invalid_timestamp_cannot_stop (test_unified_path.UnifiedPathTests.test_invalid_timestamp_cannot_stop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 144, in test_invalid_timestamp_cannot_stop
+    self.safe_retention(record('9999999x')+record(),record())
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 73, in safe_retention
+    self.assertEqual(self.rows(), list(csv.reader(io.StringIO(expected))))
+AssertionError: Lists differ: [] != [['150000', 'C', 'D']]
+
+Second list contains 1 additional elements.
+First extra element 0:
+['150000', 'C', 'D']
+
+- []
++ [['150000', 'C', 'D']]
+
+======================================================================
+FAIL: test_invalid_timestamp_not_forwarded (test_unified_path.UnifiedPathTests.test_invalid_timestamp_not_forwarded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 148, in test_invalid_timestamp_not_forwarded
+    self.assertEqual(result.stdout,record().encode())
+AssertionError: b'150000x,C,D\n150000,C,D\n' != b'150000,C,D\n'
+
+======================================================================
+FAIL: test_long_numeric_continuation_cannot_stop_runner (test_unified_path.UnifiedPathTests.test_long_numeric_continuation_cannot_stop_runner)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 113, in test_long_numeric_continuation_cannot_stop_runner
+    self.safe_retention(data,data)
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 73, in safe_retention
+    self.assertEqual(self.rows(), list(csv.reader(io.StringIO(expected))))
+AssertionError: Lists differ: [['15[4068 chars]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX']] != [['15[4068 chars]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX9999999'], ['150001', 'C', 'D']]
+
+First differing element 0:
+['150[4044 chars]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX']
+['150[4044 chars]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX9999999']
+
+Second list contains 1 additional elements.
+First extra element 1:
+['150001', 'C', 'D']
+
+Diff is 16444 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_long_record_c_to_python_integrity (test_unified_path.UnifiedPathTests.test_long_record_c_to_python_integrity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 94, in test_long_record_c_to_python_integrity
+    self.safe_retention(record(tail='X'*5000),record(tail='X'*5000))
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 73, in safe_retention
+    self.assertEqual(self.rows(), list(csv.reader(io.StringIO(expected))))
+AssertionError: Lists differ: [['15[4094 chars]XXXXX']] != [['15[4094 chars]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX[871 chars]XX']]
+
+First differing element 0:
+['150[4093 chars]XXXXX']
+['150[4093 chars]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX[870 chars]XXX']
+
+Diff is 10048 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_long_record_native_integrity (test_unified_path.UnifiedPathTests.test_long_record_native_integrity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 90, in test_long_record_native_integrity
+    self.assertEqual(result.stdout,data.encode(), 'C must preserve the entire logical record')
+AssertionError: b'150[4087 chars]XXXXX' != b'150[4087 chars]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX[871 chars]XX\n' : C must preserve the entire logical record
+
+======================================================================
+FAIL: test_native_flush_failure_must_fail (test_unified_path.UnifiedPathTests.test_native_flush_failure_must_fail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 183, in test_native_flush_failure_must_fail
+    self.assertNotEqual(result.returncode,0,'Failed fflush must not report successful completion')
+AssertionError: 0 == 0 : Failed fflush must not report successful completion
+
+======================================================================
+FAIL: test_native_stats_open_failure_must_fail (test_unified_path.UnifiedPathTests.test_native_stats_open_failure_must_fail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 177, in test_native_stats_open_failure_must_fail
+    self.assertNotEqual(result.returncode,0,'Unwritable stats destination must report failure')
+AssertionError: 0 == 0 : Unwritable stats destination must report failure
+
+======================================================================
+FAIL: test_nonmonotonic_input_must_reject_or_preserve (test_unified_path.UnifiedPathTests.test_nonmonotonic_input_must_reject_or_preserve)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 154, in test_nonmonotonic_input_must_reject_or_preserve
+    self.assertEqual(self.rows(),[['150000','C','D']],
+AssertionError: Lists differ: [] != [['150000', 'C', 'D']]
+
+Second list contains 1 additional elements.
+First extra element 0:
+['150000', 'C', 'D']
+
+- []
++ [['150000', 'C', 'D']] : Unsorted input must fail explicitly or retain later eligible rows
+
+======================================================================
+FAIL: test_numeric_fragment_cannot_stop_runner (test_unified_path.UnifiedPathTests.test_numeric_fragment_cannot_stop_runner)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 108, in test_numeric_fragment_cannot_stop_runner
+    self.safe_retention('9999999fragment\n'+record(),record())
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 73, in safe_retention
+    self.assertEqual(self.rows(), list(csv.reader(io.StringIO(expected))))
+AssertionError: Lists differ: [] != [['150000', 'C', 'D']]
+
+Second list contains 1 additional elements.
+First extra element 0:
+['150000', 'C', 'D']
+
+- []
++ [['150000', 'C', 'D']]
+
+======================================================================
+FAIL: test_numeric_fragment_not_forwarded (test_unified_path.UnifiedPathTests.test_numeric_fragment_not_forwarded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/lanl_pilot_audit/tests/phase1/test_unified_path.py", line 105, in test_numeric_fragment_not_forwarded
+    self.assertEqual(result.stdout,record().encode())
+AssertionError: b'150000fragment\n150000,C,D\n' != b'150000,C,D\n'
+
+----------------------------------------------------------------------
+Ran 21 tests in 2.706s
+
+FAILED (failures=19)
